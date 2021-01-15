@@ -1,0 +1,81 @@
+body { font-family: "Poppins", "Noto Sans KR"; color: #111; -webkit-font-smoothing: antialiased; }
+
+#header { position: fixed; display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; height: 200px; padding: 0 50px; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; z-index: 10; }
+
+#header.on .btnAll span:nth-child(1) { top: 40px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+#header.on .btnAll span:nth-child(2) { opacity: 0; left: -100px; }
+
+#header.on .btnAll span:nth-child(3) { top: 40px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+#header #logo { font-size: 18px; font-weight: 100; color: #fff; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
+
+#header #logo a { display: block; padding: 10px; line-height: 1; font-weight: 400; text-transform: uppercase; position: relative; }
+
+#header #logo a #gooey { position: absolute; }
+
+#header #logo a .blobs { -webkit-filter: url("#goo"); filter: url("#goo"); position: absolute; top: -00px; }
+
+#header #logo a .blobs .blob { background: #000; width: 100px; height: 100px; border-radius: 100%; position: absolute; }
+
+#header #logo a .blobs .blob:nth-child(1) { left: -75px; }
+
+#header #logo a .blobs .blob:nth-child(2) { left: -25px; }
+
+#header #logo a .blobs .blob:nth-child(3) { left: 0px; }
+
+#header #logo a .blobs .blob:nth-child(4) { left: 25px; }
+
+#header #logo a .blobs .blob:nth-child(5) { left: 75px; }
+
+#header #logo a .txt { position: relative; z-index: 2; }
+
+#header #logo a .txt span { display: block; }
+
+#header #logo a .txt span.hanja { width: 110px; -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1)); filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1)); }
+
+#header #logo a .txt span.eng { font-size: 10px; margin-top: 10px; }
+
+#header .btnAll { width: 80px; height: 80px; position: relative; top: -20px; }
+
+#header .btnAll span { position: absolute; left: 20px; display: block; width: 40px; height: 2px; background-color: #fff; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
+
+#header .btnAll span:nth-child(1) { top: 25px; }
+
+#header .btnAll span:nth-child(2) { top: 40px; }
+
+#header .btnAll span:nth-child(3) { top: 55px; }
+
+#gnb { position: fixed; width: 100%; height: 100%; background-color: #8f090f; z-index: 9; top: -100%; color: #fff; overflow: hidden; }
+
+#gnb ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; text-align: left; height: 100%; padding-left: 50%; }
+
+#gnb ul li { font-size: 120px; text-transform: uppercase; font-weight: 100; margin: 10px 0; }
+
+#gnb .copyright { position: absolute; left: 50px; bottom: 100px; color: #fff; text-transform: uppercase; font-weight: 300; opacity: 0.5; }
+
+#main { min-height: 100vh; background: linear-gradient(-45deg, #fa6639, #ee2b76, #1bb3eb, #0ae4b1); background-size: 400% 400%; -webkit-animation: moveBg 15s ease infinite; animation: moveBg 15s ease infinite; }
+
+#main:before { content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, 0, transparent 100px) transparent; }
+
+#main .slogan { position: absolute; width: 100%; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); color: #fff; font-size: 3vw; font-weight: 100; text-align: center; text-transform: uppercase; text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); }
+
+#main .slogan > * { display: inline-block; }
+
+#main .slogan strong { font-weight: 700; }
+
+#main .slogan .dot { margin: 0 20px; font-weight: 700; }
+
+#main .slogan .mask { font-weight: 100; }
+
+#main .slogan .mask.typed-cursor { font-weight: 100; }
+
+#main #particle { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+
+@-webkit-keyframes moveBg { 0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; } }
+
+@keyframes moveBg { 0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; } }
