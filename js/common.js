@@ -63,29 +63,56 @@ const typed = new Typed(".slogan .mask", {
 particlesJS.load("particle", "../js/particlesjs-config.json", function() {
     //console.log('callback - particles.js config loaded');
 });
-
-
-function gooey(mc) {
+function makeBlobs() {
+    const blobs = $(".blobs");
+    for(let i=0;i<7;i++){
+        blobs.append(`<div class="blob"></div>`);
+    }
+    const blob = blobs.find(".blob");
+    const total = blob.length;
+    const harf = Math.ceil(total/2);
+    const w = 300;
+    blob.each(function(i,item){
+        gsap.set(item,{
+            width:w,
+            height:w,
+            left:(i-harf)*w/2,
+            top:-w/2,
+        });
+        gooey(item,w);
+    })
+}
+makeBlobs();
+function gooey(mc,w) {
     gsap.to(mc,{
         duration:()=>{
-            return Math.random()*2+1
+            return Math.random()*3+3
         },
         x:()=> {
-            return Math.random()*60-30
+            return Math.random()*w-w/2
         },
         y:()=> {
-            return Math.random()*60-30
+            return Math.random()*w-w/2
         },
+        rotation:()=> {
+            return Math.random()*360-180
+        },
+        
         scale:()=> {
             return Math.random()*0.5+0.5
         },
         onComplete:()=> {
-            gooey(mc)
+            gooey(mc,w)
         }
     })
 };
+/*
 gooey(".blobs .blob:nth-child(1)");
 gooey(".blobs .blob:nth-child(2)");
 gooey(".blobs .blob:nth-child(3)");
 gooey(".blobs .blob:nth-child(4)");
 gooey(".blobs .blob:nth-child(5)");
+*/
+const txt = document.querySelector("#circleTxt")
+const circleType = new CircleType(txt)
+

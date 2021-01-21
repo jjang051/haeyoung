@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/circletype.min.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script src="../js/gsap/gsap.min.js"></script>
     <script src="../js/gsap/ScrollTrigger.min.js"></script>
@@ -34,22 +35,6 @@
                     <span class="hanja"><img src="../images/layout/hanja.svg" alt=""></span>
                     <span class="eng">swim across the sea</span>
                 </div>
-                <div class="blobs">
-                    <div class="blob"></div>
-                    <div class="blob"></div>
-                    <div class="blob"></div>
-                    <div class="blob"></div>
-                    <div class="blob"></div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="gooey">
-                    <defs>
-                      <filter id="goo">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
-                        <feBlend in="SourceGraphic" in2="goo" />
-                      </filter>
-                    </defs>
-                </svg>
             </a>
 		</h1>
 		<button class="btnAll">
@@ -68,66 +53,45 @@
         <p class="copyright">all copyright reserved by hye young</p>
     </nav>
     <main id="main">
-        <!--
-        <div class="slogan">
-            <p>
-                <span>i</span>
-                <span class="dot">·</span>
-                <div class="mask">
-                    
-                </div>
-                <span class="dot">·</span>
-                <span>you</span>
-            </p>
-        </div>
-        -->
         <div class="slogan">
             <div class="mask"></div>
-            <!--
-            <ul id="typing">
-                <li>
-                    <span><strong>i</strong></span>
-                    <span class="dot"><strong>·</strong></span>
-                    <span>programming</span>
-                    <span class="dot"><strong>·</strong></span>
-                    <span><strong>javascript</strong></span>
-                </li>
-                <li>
-                    <span><strong>i</strong></span>
-                    <span class="dot">·</span>
-                    <span>markup</span>
-                    <span class="dot">·</span>
-                    <span><strong>html5</strong></span>
-                </li>
-                <li>
-                    <span><strong>i</strong></span>
-                    <span class="dot">·</span>
-                    <span>designing</span>
-                    <span class="dot">·</span>
-                    <span><strong>scss/css</strong></span>
-                </li>
-                <li>
-                    <span><strong>i</strong></span>
-                    <span class="dot">·</span>
-                    <span>prototyping</span>
-                    <span class="dot">·</span>
-                    <span><strong>figma</strong></span>
-                </li>
-                <li>
-                    <span><strong>i</strong></span>
-                    <span class="dot">·</span>
-                    <span>loving</span>
-                    <span class="dot">·</span>
-                    <span><strong>you</strong></span>
-                </li>
-            </ul>
-            -->
+            
         </div>
-        
+        <div class="blobs">
+            
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="gooey">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="50" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values=
+                    "
+                    1 0 0 0 0  
+                    0 1 0 0 0  
+                    0 0 1 0 0  
+                    0 0 0 100 -50
+                    " 
+                    result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+        </svg>
         <div id="particle">
-
+            
+        </div>
+        <div class="swim">
+            <span class="eng">UI/UX Developer Lee Hae Young</span>
+            <span class="eng">I am ready to go for the next steps</span>
+        </div>
+        <div class="big">
+            <p id="circleTxt">
+                I will swim across the sea of programming.
+                I will swim across the sea of programming.
+                I will swim across the sea of programming.
+            </p>
         </div>
     </main>
+    
     <footer id="footer">
 
     </footer>
